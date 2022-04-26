@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background: radial-gradient(circle at 50% 0%,hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-position: top !important;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box{
+    padding: 15px 20px;
+    margin-top: 40px;
+    border: 3px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}
+.box .text{
+    text-transform: uppercase;
+    font-size: 36px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 29px;
+}
+.box .score{
+    width: 120px;
+    padding: 10px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 7px;
+}
+.score-txt{
+    text-transform: uppercase;
+    color: hsl(229, 64%, 46%);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+.score-num{
+    font-size: 48px;
+    color: hsl(217, 16%, 45%);
+}
+
+.sign{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 18px solid ;
+    margin-bottom: 30px;
+}
+.paper{
+    border-color: hsl(230, 89%, 62%);
+    box-shadow: inset 0px 4px hsla(230, 89%, 65%, 0.6),
+    0px 4px hsla(230, 89%, 65%, 0.4);
+}
+.rock{
+    border-color:  hsl(349, 71%, 52%);
+    box-shadow: inset 0px 4px hsla(349, 70%, 56%, 0.6),
+    0px 4px hsla(349, 70%, 56%, 0.4);
+    margin: 0 auto;
+}
+.scissor{
+    border-color: hsl(39, 89%, 49%);
+    box-shadow: inset 0px 4px hsla(40, 84%, 53%,0.6),
+    0px 4px hsla(40, 84%, 53%,0.4);
+}
+
+.signs{
+    width: 380px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 50px;
+}
+.signs::after{
+    content: '';
+    background: url(./images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: contain;
+    width: 70%;
+    height: 70%;
+    top: 60px;
+    left: 60px;
+    z-index: -1;
+}
