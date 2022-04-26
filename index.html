@@ -1,44 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  
-  <title> Rock, Paper, Scissors</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
 
- 
-</head>
-<body>
+    <title>Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <div class="box">
+      <div class="text">
+        Rock<br />
+        Paper<br />
+        Scissors
+      </div>
+      <div class="score">
+        <p class="score-txt">score</p>
+        <p id="score-num" class="score-num">0</p>
+      </div>
+    </div>
 
-  <div class="box">
-    <div class="text">
-      Rock<br>
-      Paper<br>
-      Scissors
+    <div class="signs" id="signs">
+      <div class="sign paper" alt="paper">
+        <img src="./images/icon-paper.svg" alt="paper" />
+      </div>
+      <div class="sign scissor" alt="scissor">
+        <img src="./images/icon-scissors.svg" alt="scissor" />
+      </div>
+      <div class="sign rock" alt="rock">
+        <img src="./images/icon-rock.svg" alt="rock" />
+      </div>
     </div>
-    <div class="score">
-      <p class="score-txt">
-        score
-      </>
-      <p class="score-num">
-        12
-      </p>
-    </div>
-  </div>
 
-  <div class="signs">
-    <div class="sign paper" alt="paper">
-      <img src="./images/icon-paper.svg" alt="paper">
+    <div id="step2">
+     
+
+      <div class="flex ">
+
+        <div>
+        <p>You picked</p>
+        <div id="userSelection" class="circle paper thick-border" alt="paper">
+          <img src="./images/icon-paper.svg" alt="paper" />
+        </div>
+      </div>
+
+      <div id="result">
+        <p id="result-txt"><p>
+        <button id="play-again" class="play-again">Play Again</button>
+      </div>
+
+
+      <div>
+        <p>You picked</p>
+        <div id="compSelection" class="small-circle circle thick-border black">
+          <img src="" alt="">
+        </div>
+      </div>
     </div>
-    <div class="sign scissor" alt="scissor">
-      <img src="./images/icon-scissors.svg" alt="scissor">
     </div>
-    <div class="sign rock" alt="rock">
-      <img src="./images/icon-rock.svg" alt="rock">
-    </div>
-  </div>
-</body>
+
+    <script src="app.js"></script>
+  </body>
 </html>
