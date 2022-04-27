@@ -35,6 +35,8 @@ playAgain.addEventListener('click', () =>{
     compPicked.classList.remove("rock");
     compPicked.classList.remove("scissor");
     compPicked.classList.remove("sign");
+    compPicked.classList.remove("winner");
+    userPicked.classList.remove("winner");
     result.style.display = 'none';
     compPickedImg.src = " ";
 })
@@ -118,15 +120,18 @@ function checkWinner() {
     result.style.display = 'flex';
 
     if (computerChoice === userChoice) {
-        resultTxt.innerText = 'draw'
+        resultTxt.innerText = 'draw';
+        
     } else if ((userChoice === "paper" && computerChoice === "scissor") ||
         (userChoice === "scissor" && computerChoice === "rock") ||
         (userChoice === "rock" && computerChoice === "paper")) {
         updateScore(-1);
-        resultTxt.innerText = 'you lose'
+        resultTxt.innerText = 'you lose';
+        compPicked.classList.add("winner");
     } else {
         updateScore(1)
-        resultTxt.innerText = 'you win'
+        resultTxt.innerText = 'you win';
+        userPicked.classList.add("winner");
     }
 }
 
