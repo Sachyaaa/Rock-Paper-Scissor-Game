@@ -74,16 +74,32 @@ body{
     box-shadow: inset 0px 6px hsla(230, 89%, 65%, 0.6),
     0px 6px hsla(230, 89%, 65%, 0.4);
 }
+.paper:hover{
+    box-shadow: inset 0px 6px hsla(230, 89%, 65%, 0.6),
+    0px 6px hsla(230, 89%, 65%, 0.4),
+    0px 0px 20px hsl(230, 89%, 62%); 
+}
 .rock{
     border-color: hsl(349, 71%, 52%) !important;
     box-shadow: inset 0px 4px hsla(349, 70%, 56%, 0.6),
     0px 4px hsla(349, 70%, 56%, 0.4);
     margin: 0 auto;
 }
+.rock:hover{
+    box-shadow: inset 0px 4px hsla(349, 70%, 56%, 0.6),
+    0px 4px hsla(349, 70%, 56%, 0.4),
+    0px 0px 20px hsl(349, 71%, 52%);
+    
+}
 .scissor{
     border-color: hsl(39, 89%, 49%) !important;
     box-shadow: inset 0px 6px hsla(40, 84%, 53%,0.6),
     0px 6px hsla(40, 84%, 53%,0.4);
+}
+.scissor:hover{
+    box-shadow: inset 0px 6px hsla(40, 84%, 53%,0.6),
+    0px 6px hsla(40, 84%, 53%,0.4),
+    0px 0px 20px hsl(39, 89%, 49%);
 }
 
 .signs{
@@ -141,9 +157,10 @@ body{
 }
 .flex p{
     color: #fff;
-    font-size: 28px;
+    font-size: 26px;
     text-align: center;
     margin-bottom: 30px;
+    text-transform: uppercase;
 }
 .flex{
     display: flex;
@@ -176,7 +193,56 @@ body{
     font-size: 15px;
     border: none;
     color: hsl(349, 71%, 52%);
+    cursor: pointer;
+}
+.play-again:hover{
+    box-shadow: 0px 6px 12px #010101;
+}
+#compSelection{
+    cursor: default;
+}
+
+.rules{
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px 30px;
+    border: 2px solid  hsl(217, 16%, 45%);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: 30px;
+    position: relative;
+    top: -30px;
+    text-transform: uppercase;
+}
+.rules:hover{
+    border: 2px solid hsl(39, 89%, 49%);
     
+}
+#rules-popup{
+    padding: 25px;
+    background: #fff;
+    display: none;
+    position: fixed;
+    top: 30%;
+    border-radius: 10px;
+}
+.rules-txt{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: hsl(217, 16%, 45%);
+    text-transform: uppercase;
+}
+#rules-popup>img{
+    padding: 0px 20px;
+}
+#close{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 /* #compSelection{

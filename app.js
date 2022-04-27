@@ -11,11 +11,22 @@ const compPickedImg = document.querySelector("#compSelection img");
 const resultTxt = document.getElementById("result-txt");
 const result = document.getElementById("result");
 const playAgain = document.getElementById("play-again");
+const rules = document.querySelector(".rules");
+const rulesPopup = document.getElementById("rules-popup");
+const close = document.getElementById("close");
 
 
 let score = 0;
 let winner = undefined;
 let computerChoice ;
+
+
+rules.addEventListener('click',()=>{
+    rulesPopup.style.display = "block";
+})
+close.addEventListener('click',()=>{
+    rulesPopup.style.display = "none";
+})
 
 playAgain.addEventListener('click', () =>{
     main.style.display = "flex";
