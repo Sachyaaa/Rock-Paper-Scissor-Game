@@ -131,6 +131,9 @@ body{
     z-index: -1;
 }
 @media only screen and (max-width: 786px) {
+    body{
+        height: 150vh;
+    }
     .signs{
         margin-top: 30px;
     }
@@ -251,7 +254,7 @@ body{
     #result{
         margin: 0px;
         position: absolute;
-        top: 55%;
+        top: 60%;
         margin-top: 40px;
     }
     #result p{
@@ -278,6 +281,7 @@ body{
     margin-left: auto;
     margin-right: 30px;
     position: absolute;
+    margin-top: 30px;
     top: 90vh;
     right: 30px;
     text-transform: uppercase;
